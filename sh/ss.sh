@@ -17,4 +17,4 @@ echo \"timeout\":600 >> config.json
 echo } >> config.json
 cp shadowsocks-server.service /etc/systemd/system/
 systemctl enbale shadowsocks-server
-shut -r +0
+shutdown -r +0
