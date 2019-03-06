@@ -1,7 +1,7 @@
 # tools
 My tools
 - ss
-  - usage
+  login ubuntu:
   ```shell
   curl -sSL https://raw.githubusercontent.com/sspantz/tools/master/sh/ss.sh | sh
   ```
