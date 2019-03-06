@@ -19,5 +19,5 @@ echo } >> config.json
 cp shadowsocks-server.service /etc/systemd/system/
 systemctl enable shadowsocks-server
 systemctl restart shadowsocks-server
-echo "Please setting your client with the follow json file."
+echo "Please set your client with the follow json file."
 cat config.json
