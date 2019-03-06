@@ -3,7 +3,7 @@ Description=Shadowsocks Server
 After=network.target
 
 [Service]
-ExecStart=$HOME/go/bin/shadowsocks-server -c $HOME/config.json
+ExecStart=/root/go/bin/shadowsocks-server -c /root/config.json
 Restart=always
 
 [Install]
