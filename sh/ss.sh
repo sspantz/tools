@@ -1,4 +1,6 @@
 #!/bin/sh
+RED='\033[0;31m'
+NC='\033[0m'
 apt update -y
 apt install golang -y
 go get github.com/shadowsocks/shadowsocks-go/cmd/shadowsocks-server
@@ -19,5 +21,5 @@ echo } >> config.json
 cp shadowsocks-server.service /etc/systemd/system/
 systemctl enable shadowsocks-server
 systemctl restart shadowsocks-server
-echo "Please set your client with the follow json file."
+echo -e "${RED}Please set your client by referring to following json file.${NC}"
 cat config.json
