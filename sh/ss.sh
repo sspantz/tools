@@ -2,8 +2,9 @@
 RED='\033[0;31m'
 NC='\033[0m'
 apt update -y
-apt install golang -y
-go get github.com/shadowsocks/shadowsocks-go/cmd/shadowsocks-server
+apt install golang wget -y
+wget https://github.com/shadowsocks/shadowsocks-go/releases/download/1.2.1/shadowsocks-server.tar.gz
+tar xzvf shadowsocks-server.tar.gz
 wget https://raw.githubusercontent.com/sspantz/tools/master/sh/shadowsocks-server.service
 echo { > config.json
 echo -n \"server\":\" >> config.json
