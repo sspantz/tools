@@ -3,8 +3,11 @@ RED='\033[0;31m'
 NC='\033[0m'
 apt update -y
 apt install golang wget -y
+mkdir ss
+cd ss
 wget https://github.com/shadowsocks/shadowsocks-go/releases/download/1.2.1/shadowsocks-server.tar.gz
 tar xzvf shadowsocks-server.tar.gz
+rm shadowsocks-server.tar.gz
 wget https://raw.githubusercontent.com/sspantz/tools/master/sh/shadowsocks-server.service
 echo { > config.json
 echo -n \"server\":\" >> config.json
@@ -20,6 +23,7 @@ echo \"method\": \"aes-128-cfb\", >> config.json
 echo \"timeout\":600 >> config.json
 echo } >> config.json
 cp shadowsocks-server.service /etc/systemd/system/
+rm shadowsocks-server.service
 systemctl enable shadowsocks-server
 systemctl restart shadowsocks-server
 echo "${RED}Please set your client by referring to following json file.${NC}"

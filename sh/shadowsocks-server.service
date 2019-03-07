@@ -3,7 +3,7 @@ Description=Shadowsocks Server
 After=network.target
 
 [Service]
-ExecStart=/root/shadowsocks-server -c /root/config.json
+ExecStart=/root/ss/shadowsocks-server -c /root/ss/config.json
 Restart=always
 
 [Install]
