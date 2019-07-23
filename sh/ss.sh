@@ -15,6 +15,13 @@ echo -n $(/sbin/ifconfig -a|grep inet|grep -v 127.0.0.1|grep -v inet6|awk '{prin
 echo \", >> config.json
 echo \"local_address\":\"127.0.0.1\", >> config.json
 echo \"port_password\": { >> config.json
+echo \"8380\": \"159159!\", >> config.json
+echo \"8381\": \"159159!\", >> config.json
+echo \"8382\": \"159159!\", >> config.json
+echo \"8383\": \"159159!\", >> config.json
+echo \"8384\": \"159159!\", >> config.json
+echo \"8385\": \"159159!\", >> config.json
+echo \"8386\": \"159159!\", >> config.json
 echo \"8387\": \"159159!\", >> config.json
 echo \"8388\": \"147147!\", >> config.json
 echo \"8389\": \"123123!\" >> config.json
